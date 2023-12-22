@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.todo-list {
+    width: 50vw;
+    height: 60vh;
+    background: #fff;
+    padding: 40px 30px 70px;
+    overflow: scroll;
+    margin: 100px auto 20px;
+    border-radius: 10px;
+}
+.container .todo-list h2 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+.container .todo-list h2 img {
+    width: 30px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+input {
+    padding-left: 20px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    border-radius: 40px;
+    background-color: orange;
+    cursor: pointer;
+}
+ul li {
+    list-style-type: none;
+    position: relative;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+    top: 12px;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("images/checked.png")
+}
